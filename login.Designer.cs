@@ -52,7 +52,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(340, 80);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(156, 20);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -70,7 +70,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(340, 106);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(156, 20);
             this.textBox2.TabIndex = 4;
             // 
             // label2
@@ -103,12 +103,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(341, 10);
+            this.button2.Location = new System.Drawing.Point(421, 132);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
+            this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // login
             // 
