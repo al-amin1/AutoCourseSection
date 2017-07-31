@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.username = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,13 +48,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "username";
             // 
-            // textBox1
+            // username
             // 
-            this.textBox1.Location = new System.Drawing.Point(340, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.username.Location = new System.Drawing.Point(340, 80);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(156, 20);
+            this.username.TabIndex = 1;
+            this.username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -66,12 +66,12 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // password
             // 
-            this.textBox2.Location = new System.Drawing.Point(340, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 20);
-            this.textBox2.TabIndex = 4;
+            this.password.Location = new System.Drawing.Point(340, 106);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(156, 20);
+            this.password.TabIndex = 4;
             // 
             // label2
             // 
@@ -118,10 +118,10 @@
             this.ClientSize = new System.Drawing.Size(668, 262);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.password);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.username);
             this.Controls.Add(this.label1);
             this.Name = "login";
             this.Text = "login";
@@ -135,9 +135,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox username;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
