@@ -29,13 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,6 +54,43 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(21, 136);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(120, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Routine";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(21, 107);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(120, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Section";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(21, 78);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(120, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Course";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(21, 49);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Faculty";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(21, 20);
@@ -65,51 +105,23 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Location = new System.Drawing.Point(193, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 514);
+            this.groupBox1.Size = new System.Drawing.Size(715, 514);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Department";
+            this.groupBox1.Text = "groupBox";
             this.groupBox1.Visible = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // button2
+            // dataGridView1
             // 
-            this.button2.Location = new System.Drawing.Point(21, 49);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Faculty";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(21, 78);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Course";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(21, 107);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Section";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(21, 136);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(120, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Routine";
-            this.button5.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(600, 427);
+            this.dataGridView1.TabIndex = 0;
             // 
             // dashboard
             // 
@@ -122,6 +134,8 @@
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.dashboard_Load);
             this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -135,5 +149,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

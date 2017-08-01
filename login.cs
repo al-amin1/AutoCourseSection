@@ -51,7 +51,7 @@ namespace AutoCourseSection
 
                 //command
                 string query = "SELECT * FROM users WHERE username='"+ this.username.Text +"' AND password='"+ this.password.Text +"'";
-                MessageBox.Show(query);
+                //MessageBox.Show(query);
               
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -61,7 +61,7 @@ namespace AutoCourseSection
 
                 if (dataReader.HasRows)
                 {
-                    MessageBox.Show("Login success.");
+                    //MessageBox.Show("Login success.");
                     this.Hide();
                     dashboard adb = new dashboard();
                     adb.Show();

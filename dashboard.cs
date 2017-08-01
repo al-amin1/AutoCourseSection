@@ -13,13 +13,21 @@ namespace AutoCourseSection
 {
     public partial class dashboard : Form
     {
+
         public dashboard()
         {
             InitializeComponent();
+            dbConnection();
         }
 
         private void dashboard_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void dbConnection()
+        {
+            //MySqlConnection dbConnect = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=;database=course_distribution");
 
         }
 
@@ -31,15 +39,46 @@ namespace AutoCourseSection
         private void button1_Click(object sender, EventArgs e)
         {
 
-            dashboard gbox1 = new dashboard();
-            gbox1.groupBox1.Hide();
+            try
+            {
 
-            getDepartment();
-        }
+                MySqlConnection dbConnect = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=;database=course_distribution");
+                dbConnect.Open();
 
-        private void getDepartment()
-        {
-           
+                MySqlCommand cmdFacultyTbl = new MySqlCommand("SELECT * FROM faculty", dbConnect);
+
+                MySqlDataReader fReader = cmdFacultyTbl.ExecuteReader();
+
+                if (fReader.HasRows)
+                {
+                    //MessageBox.Show("f load.");
+
+                    MySqlDataAdapter sda = new MySqlDataAdapter();
+                    sda.SelectCommand = cmdFacultyTbl;
+                    DataTable dbDataSet = new DataTable();
+                    sda.Fill(dbDataSet);
+
+                    BindingSource bSource = new BindingSource();
+
+                    bSource.DataSource = dbDataSet;
+                    dataGridView1.DataSource = bSource;
+                    sda.Update(dbDataSet);
+
+
+
+                } else
+                {
+                    MessageBox.Show("Query problem or empty table.");
+                }
+
+                dbConnect.Close();
+
+
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -51,5 +90,11 @@ namespace AutoCourseSection
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
     }
 }
