@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace AutoCourseSection
 {
@@ -28,6 +29,25 @@ namespace AutoCourseSection
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+            dashboard gbox1 = new dashboard();
+            gbox1.groupBox1.Hide();
+
+            getDepartment();
+        }
+
+        private void getDepartment()
+        {
+           
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
